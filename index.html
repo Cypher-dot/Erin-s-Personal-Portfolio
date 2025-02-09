@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Erin John - Economic and Data Analyst specializing in Python, R, SQL, and Tableau. Explore my projects, resume, and contact information.">
+    <title>Erin John - Economic & Data Analyst</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Lato:wght@400&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+    
+    
+    
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: 'Lato', sans-serif;
+            color: #333;
+            background-color: #E6E6FA;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            color: #333;
+        }
+
+        button, .button {
+            background-color: #6495ED;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            margin-top: 10px;
+            border-radius: 5px;
+            font-size: 1rem;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .cta-buttons a {
+            display: inline-block; /* Ensures buttons behave as blocks */
+            margin: 5px auto; /* Adds spacing between buttons */
+            width: 200px; /* Ensures equal button width */
+            text-align: center;
+        }
+        
+
+        button:hover, .button:hover {
+            background-color: #4169E1;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #ffffff;
+            color: #333;
+            padding: 15px 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: top 0.3s ease;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-left: 20px;
+            color: #6495ED;
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+            padding-right: 20px;
+        }
+
+        /* Navbar Hover Effect */
+        .nav-menu a {
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 15px;
+            position: relative; /* Required for the pseudo-element */
+            display: inline-block; /* Ensure proper width transition */
+            transition: color 0.3s ease;
+        }
+        
+        .nav-menu a:hover {
+            color: #6495ED; /* Change text color on hover */
+        }
+
+        /* Cool Hover Effect */
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #6495ED;
+            transition: width 0.3s ease, left 0.3s ease;
+        }
+        
+        .nav-menu a:hover::after {
+            width: 100%;
+            left: 0;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: center; /* Centers the content horizontally */
+            min-height: 70vh;
+            background: linear-gradient(to bottom, #ADD8E6, #F5F5F5);
+            padding: 20px;
+            gap: 20px;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            max-width: 600px;
+            opacity: 0;
+            transform: translateX(30px);
+            animation: slideIn 1.5s ease-out forwards;
+            animation-delay: 1s;
+            margin-left: 20px;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .profile-photo {
+            border-radius: 50%;
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            margin-right: 20px;
+            animation: fadeIn 1.5s ease-out, scaleUp 1.5s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes scaleUp {
+            from {
+                transform: scale(0.8);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* About Me Section */
+        .about {
+            padding: 50px 0;
+            background-color: #ffffff;
+            animation: fadeInUp 2s ease-out forwards;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .about h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .contact {
+            padding: 50px 0;
+            background-color: #ffffff;
+        }
+
+        .contact-icons {
+            margin-top: 20px;
+        }
+
+        .icon-link {
+            margin: 0 15px;
+            display: inline-block;
+            font-size: 40px;
+        }
+
+        .icon-link i {
+            transition: color 0.3s ease;
+        }
+
+        .icon-link .fa-envelope {
+            color: #333;
+        }
+
+        .icon-link .fa-envelope:hover {
+            color: #6495ED;
+        }
+
+        .icon-link .fa-linkedin {
+            color: #0077b5;
+        }
+
+        .icon-link .fa-linkedin:hover {
+            color: #004182;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Erin John</a>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <img src="pfp.jpg" alt="Portrait of Erin John" class="profile-photo">
+        <div class="hero-content">
+            <h1>Hi! It's Erin John</h1>
+            <p>I am an Economic and Data Analyst</p>
+            <p>Masters in Economics & Business (UCL) | Proficient in Python, R, SQL, Tableau</p>
+            <div class="cta-buttons">
+                <a href="resume.pdf" class="button" download>Download My Resume</a>
+            
+                <br></br>
+                <a href="projects.html" class="button">View My Work</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>I’m an economist with a double master’s from UCL and experience in data
+            analysis, economic research, and business insights. My expertise lies in Python,
+            R, Tableau and Power BI with a strong passion for uncovering patterns in data.</p>
+
+            <p>Most recently I was part of an employer project as a Data Analyst at the Bank of England, I applied structured thinking to distil complex business problems, utilised advanced software like Excel, SQL, Tableau, Python, and R for data interrogation, and presented actionable insights to stakeholders. My role involves significant collaboration with diverse professionals, enhancing my teamwork and project management skills.</p>
+
+            <p>In my academic journey, I completed a double master's in Economics and Business from University College London, achieving a merit classification (2:1), and conducted research in Prague with the support of an Erasmus scholarship. My undergraduate studies in Economics at the University of Kerala placed me in the top 5% of my class with an 8.87 GPA. While at London South Bank University and London Metropolitan University, I served as a Lecturer and Module Lead, mentoring over 100 students and innovating curricula to improve student engagement and understanding.</p>
+
+            <p>I have also contributed as a Research Assistant at UCL, where I honed my market research and analytical skills, and as an Educator at Kalendit, demonstrating my ability to manage and deliver tailored learning experiences. Additionally, my role as a Student Advisor for Sustainability at UCL and Camden Council showcased my creative problem-solving and communication abilities in addressing environmental challenges.</p>
+
+            <p>I recently completed a Career Accelerator certification course in Data Analytics from the London School of Economics and Political Science, further enhancing my analytical capabilities. My technical proficiency includes Microsoft Office, Stata, Tableau, Python, and SQL.</p>
+
+            <p>A passion for data-driven decision-making and economic research drives my career. I am committed to leveraging my skills and experiences to contribute to impactful projects and innovative solutions in the fields of data analysis and economics. Outside of work, I am deeply interested in music, public speaking, and environmental causes.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <div class="contact-icons">
+                <!-- Open Gmail in a new tab -->
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=erindeena99@gmail.com" target="_blank" class="icon-link">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <!-- LinkedIn Profile -->
+                <a href="https://www.linkedin.com/in/erin-john15" target="_blank" class="icon-link">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Erin John</p>
+    </footer>
+
+    <!-- JavaScript to hide/show navbar on scroll -->
+    <script>
+        let lastScrollTop = 0;
+        window.addEventListener("scroll", function() {
+            let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+            if (currentScroll > lastScrollTop) {
+                document.querySelector('header').style.top = "-80px";  // Hide navbar when scrolling down
+            } else {
+                document.querySelector('header').style.top = "0";  // Show navbar when scrolling up
+            }
+            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+        });
+    </script>
+</body>
+</html>

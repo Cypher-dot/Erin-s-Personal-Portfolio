@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Erin John - Economic and Data Analyst specializing in Python, R, SQL, and Tableau. Explore my projects, resume, and contact information.">
+    <title>Erin John - Resume</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Lato:wght@400&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: 'Lato', sans-serif;
+            color: #333;
+            background: linear-gradient(to bottom, #ADD8E6, #F5F5F5); /* Blue to white gradient */
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            padding: 100px 20px;
+        }
+
+        .content {
+            width: 60%;
+            padding-left: 30px;
+            text-align:center;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            animation: fadeInUp 2s ease-out;
+            margin-right: 30px;
+        }
+
+        .pdf-preview {
+            flex: 1;
+            max-width: 800px;
+            height: 800px;
+            border: 2px solid #6495ED;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            animation: fadeInRight 2s ease-out;
+        }
+
+        .pdf-preview canvas {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+
+        h1, h2 {
+            font-family: 'Montserrat', sans-serif;
+            color: #333;
+            text-align: center;
+            animation: fadeInUp 2s ease-out;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 40px; /* Increased space from 20px to 40px */
+            animation: fadeInUp 2s ease-out;
+        }
+
+        .button {
+            background-color: #6495ED;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+        }
+
+        .button:hover {
+            background-color: #4169E1;
+        }
+
+        /* Navbar Style */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #ffffff;
+            color: #333;
+            padding: 15px 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-left: 20px;
+            color: #6495ED;
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+            padding-right: 20px;
+        }
+
+        .nav-menu a {
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 15px;
+            position: relative;
+            display: inline-block;
+            transition: color 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            color: #6495ED;
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #6495ED;
+            transition: width 0.3s ease, left 0.3s ease;
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+            left: 0;
+        }
+
+        /* PDF Preview Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <a href="#" class="logo">Erin John</a>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+
+    </nav>
+    <div class="container">
+        <!-- Resume Content -->
+        <div class="content">
+            <h1>Erin John - Resume</h1>
+
+            <div class="resume-section">
+                <h2 class="section-title">Education</h2>
+                <p><strong>Masters in Economics & Business</strong> - University College London (UCL), 2:1 Merit Classification</p>
+                <p><strong>Undergraduate in Economics</strong> - University of Kerala, Top 5% of Class</p>
+            </div>
+
+            <div class="resume-section">
+                <h2 class="section-title">Experience</h2>
+                <p><strong>Data Analyst</strong> - Bank of England (2022 - Present)</p>
+                <p>Applied structured thinking to complex business problems.</p>
+                <p>Utilized Python, R, SQL for data analysis and insights.</p>
+            </div>
+
+            <div class="resume-section">
+                <h2 class="section-title">Skills</h2>
+                <p>Data Analysis: Python, R, SQL</p>
+                <p>Data Visualization: Tableau, Power BI</p>
+                <p>Financial Analysis: Forecasting, Investment Modeling</p>
+                <p>Communication: Report Writing, Presentation</p>
+            </div>
+
+            <div class="resume-section">
+                <h2 class="section-title">Certifications</h2>
+                <p>Data Analytics Career Accelerator from LSE</p>
+            </div>
+
+            <div class="button-container">
+                <a href="resume.pdf" class="button" download>Download My Resume</a>
+            </div>
+        </div>
+
+        <!-- PDF Preview Section (Using PDF.js) -->
+        <div class="pdf-preview">
+            <canvas id="pdf-canvas"></canvas>
+        </div>
+    </div>
+
+    <!-- JavaScript for PDF.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+    <script>
+        const url = 'resume.pdf'; // Path to the PDF file
+        const canvas = document.getElementById('pdf-canvas');
+        const ctx = canvas.getContext('2d');
+
+        // Fetch and render the first page of the PDF
+        pdfjsLib.getDocument(url).promise.then(pdf => {
+            pdf.getPage(1).then(page => {
+                const scale = 1.8;  // Increase scale for larger rendering
+                const viewport = page.getViewport({ scale: scale });
+
+                // Set canvas dimensions dynamically based on viewport size
+                canvas.height = viewport.height;
+                canvas.width = viewport.width;
+
+                page.render({
+                    canvasContext: ctx,
+                    viewport: viewport
+                });
+            });
+        });
+    </script>
+
+    <!-- JavaScript to hide/show navbar on scroll -->
+    <script>
+        let lastScrollTop = 0;
+        window.addEventListener("scroll", function() {
+            let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+            if (currentScroll > lastScrollTop) {
+                document.querySelector('header').style.top = "-80px";  // Hide navbar when scrolling down
+            } else {
+                document.querySelector('header').style.top = "0";  // Show navbar when scrolling up
+            }
+            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+        });
+    </script>
+
+</body>
+</html>

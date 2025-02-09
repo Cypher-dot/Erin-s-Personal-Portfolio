@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Erin John</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Lato:wght@400&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: 'Lato', sans-serif;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        /* Navbar Styling */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #ffffff;
+            color: #333;
+            padding: 15px 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: top 0.3s ease;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-left: 20px;
+            color: #6495ED;
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+            padding-right: 20px;
+        }
+
+        .nav-menu a {
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 15px;
+            position: relative; /* Required for the pseudo-element */
+            display: inline-block; /* Ensure proper width transition */
+            transition: color 0.3s ease;
+        }
+        
+        .nav-menu a:hover {
+            color: #6495ED; /* Change text color on hover */
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #6495ED;
+            transition: width 0.3s ease, left 0.3s ease;
+        }
+        
+        .nav-menu a:hover::after {
+            width: 100%;
+            left: 0;
+        }
+
+        /* Projects Section */
+        .container {
+            width: 90%;
+            max-width: 12000px;
+            margin: 100px auto 20px;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+            color: #333;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 3fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .project-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .project-card h3 {
+            margin-top: 0;
+            color: #6495ED;
+        }
+
+        .project-card p {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .project-card .tags {
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .project-card .button {
+            display: inline-block;
+            margin-top: 10px;
+            background-color: #6495ED;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .project-card .button:hover {
+            background-color: #4169E1;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: white;
+            margin-top: 50px;
+        }
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .button-container .button {
+            background-color: #6495ED;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .button-container .button:hover {
+            background-color: #4169E1;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="index.html" class="logo">Erin John</a>
+    <nav>
+        <ul class="nav-menu">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="container">
+    <h1>My Projects</h1>
+    <div class="projects">
+        <div class="project-card">
+            <h3>Bank of England Project Report</h3>
+            <p><strong>Timeline:</strong> 2023-2024</p>
+            <p>Analyzed the impact of Bank of England speeches on UK economic trends using NLP techniques. 
+               Processed and cleaned speech data and combined it with economic indicators to study the correlation 
+               between speech sentiment and economic stability.</p>
+            <p class="tags">#NLP #EconomicAnalysis #CentralBank</p>
+            <h3>View Details</h3>
+            <a href="Bank Of England Project (1).pdf" class="button" download>Project Report 1</a>
+            <a href="Bank Of England Project (2).pdf" class="button" download>Project Report 2</a>
+        </div>
+
+        <div class="project-card">
+            <h3>Data Analyst Starter Projects</h3>
+            <p><strong>Timeline:</strong> 2022-Present</p>
+            <p>Created a series of beginner-friendly data analysis projects focusing on real-world datasets, including 
+               sales forecasting, customer segmentation, and trend analysis. Developed dashboards and visual reports 
+               using Tableau and Python.</p>
+            <p class="tags">#DataAnalysis #Python #Tableau</p>
+            <a href="analysis 1.0.mp4" class="button" download>Analysis1 Video</a>
+            <a href="analysis1.1.pdf" class="button" download>Analysis1 pdf</a>
+            <a href="analysis1.2.twbx" class="button" download>Analysis1 pdf2</a>
+            <a href="analysis2.0.mkv" class="button" download>Analysis2 Video</a>
+            <a href="analysis2.1.pdf" class="button" download>Analysis2 pdf1</a>
+            <a href="analysis2.2.ipynb" class="button" download>Analysis2 pdf2 </a>
+            <a href="Analysis3.0.mp4" class="button" download>Analysis3 video</a>
+            <a href="Analysis3.1.ipynb" class="button" download>Analysis3 file</a>
+            <a href="Analysis3.2.pdf" class="button" download>Analysis3 pdf</a> 
+            <a href="Analysis3.3.R" class="button" download>Analysis3 file2</a>
+        </div>
+
+        <div class="project-card">
+            <h3>Master Thesis</h3>
+            <p><strong>Timeline:</strong> 2020-2022</p>
+            <p>Conducted an in-depth econometric analysis on US Foreign Direct Investment (FDI) impact on private 
+               consumption in the Czech Republic. Used regression analysis on 40 years of data from OECD and Bloomberg 
+               to assess economic trends.</p>
+            <p class="tags">#Econometrics #RegressionAnalysis #FDI</p>
+            <a href="Master Thesis.pdf" class="button" download>Master Thesis pdf</a> 
+        </div>
+
+        <div class="project-card">
+            <h3>Self-Employed Data Analysis</h3>
+            <p><strong>Timeline:</strong> Ongoing</p>
+            <p>Worked as an independent data analyst, providing insights for businesses and individuals. Focused on 
+               trend analysis, sales forecasting, and operational efficiency improvements using data visualization 
+               and predictive modeling techniques.</p>
+            <p class="tags">#Freelance #DataScience #PredictiveModeling</p>
+            <a href="HYBE Corporation Stock Performance analysis.pdf" class="button" download>Analysis pdf</a>
+        </div>
+       
+        <div class="project-card">
+            <h3>Evolution of Southern Railways</h3>
+            <p><strong>Timeline:</strong> 2019-2020</p>
+            <p>As a project lead, my team and I explored the formation of the Southern Railway division,
+                divided into two parts. The rst part focused on its historical development using secondary sources,
+                while the second part examined how auxiliary stores at railway stations contributed to the regional
+                economy through surveys with shop vendors. Additionally, the study identied a correlation between
+                the availability of Google Wi in this division and the higher literacy rates, linking tech-savviness to
+                the regional demographic.
+                </p>
+            <p class="tags">#Research #DataAnalysis #Survey</p>
+            
+        </div>
+
+        <div class="project-card">
+            <h3>Analysis of US FDI & Private Consumption</h3>
+            <p><strong>Timeline:</strong> 2020-2022</p>
+            <p>Completed a 30,000-word dissertation as part of a double master’s program supported
+                by an Erasmus Grant, conducted in Prague. The study analysed 40 years of US FDI inow into the
+                CEE region and its impact on private consumption expenditure in the Czech Republic. Using multiple
+                regression analysis on time series and panel data from sources like OECD and Bloomberg, the
+                research revealed a signicant FDI impact, with some areas seeing up to 116% inuence. The project
+                included compulsory Czech language training.
+                </p>
+            <p class="tags">#Econometrics #RegressionAnalysis #OECD</p>
+            
+        </div>
+        <div class="project-card">
+            <h3>HYBE Case Study: Entertainment & Investment</h3>
+            <p><strong>Timeline:</strong> 2024-2025</p>
+            <p>Analyzed the impact of news sentiment on HYBE's stock prices, focusing on BTS's
+                military enlistment hiatus. Used Python for data cleaning and sentiment analysis, evaluating four
+                news articles to assess the correlation between sentiment and stock performance. Despite
+                negative news, initial sentiment analysis showed positive results, highlighting nuanced market
+                responses. Utilized Tableau to create visualizations and statistical insights, presenting findings
+                through an interactive dashboard. The project leveraged public data sources and advanced
+                analytical techniques to uncover trends. The analysis demonstrated the influence of cultural
+                news on financial markets and showcased expertise in sentiment analysis and data
+                visualization.</p>
+            <p class="tags">#SentimentAnalysis #StockMarket #DataVisualization</p>
+            
+        </div>
+
+        <div class="project-card">
+            <h3>Understanding Community-Engaged Learning</h3>
+            <p><strong>Timeline:</strong> 2021-2022</p>
+            <p>Conducted market research for UCL East to assess the viability of including
+                Community Learning in BSc programs by interviewing stakeholders and community
+                organizations. Analyzed data using custom macros and formulas to determine majority
+                preferences. Collaborated effectively with a team to meet a 4-month deadline, enhancing project
+                efficiency. The research provided actionable insights for program development.</p>
+            <p class="tags">#MarketResearch #EducationPolicy</p>
+            
+        </div>
+
+        <div class="project-card">
+            <h3>Analysis of BoE Speeches & UK Economic Trends</h3>
+            <p><strong>Timeline:</strong> 2023-2024</p>
+            <p>As part of a certication course at the London School of Economics and Political
+                Science, our team conducted a project analyzing the impact of Bank of England (BoE) speeches on
+                UK economic trends over the past three decades. The primary focus was to determine whether the
+                sentiment conveyed in these speeches could effectively mitigate economic shocks. Using Natural
+                Language Processing (NLP) techniques, we processed and cleaned the speech data, combining it
+                with economic indicators. I was in charge of data collection, ensuring that all datasets were accurate
+                and ready for analysis. Through a combination of exploratory visualizations and statistical
+                correlations, we evaluated how speech sentiment inuenced both public perception and economic
+                stability.
+                In my role, I also led the writing of the nal report and conducted the detailed analysis to ensure the
+                project adhered to its scope. The nal insights revealed patterns in the BoE’s soft inuence, such as
+                how "uncertainty" sentiments were linked to economic instability and the proactive approach taken
+                during inationary periods. The project concluded that while BoE communications played a role in
+                managing public sentiment, there was more to explore, especially regarding how voting unity in the
+                Monetary Policy Committee (MPC) aligned with public sentiment. This project underscored the value
+                of central bank communications in shaping economic outcomes.</p>
+            <p class="tags">#NLP #EconomicAnalysis #BoE</p>
+            
+        </div>
+
+        
+
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 Erin John</p>
+</footer>
+
+<script>
+    // Hide/Show Navbar on Scroll
+    let lastScrollTop = 0;
+    window.addEventListener("scroll", function () {
+        let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+        let navbar = document.querySelector("header");
+
+        if (currentScroll > lastScrollTop) {
+            navbar.style.top = "-80px"; // Hide navbar when scrolling down
+        } else {
+            navbar.style.top = "0"; // Show navbar when scrolling up
+        }
+
+        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+    });
+</script>
+
+</body>
+</html>
